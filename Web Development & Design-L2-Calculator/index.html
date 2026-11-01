@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculator</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<main class="calc" id="calc">
+  <div class="bar">
+    <h1>Calculator</h1>
+    <div class="icons">
+      <button class="icon-btn" id="histBtn" aria-label="Show history" title="History">
+        <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Light / dark">
+        <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+      </button>
+    </div>
+  </div>
+  <section class="screen" aria-live="polite">
+    <div class="expr" id="expr"><span></span></div>
+    <div class="out" id="out">0</div>
+  </section>
+  <div class="keys" id="keys">
+    <button class="key fn" data-k="C" aria-label="Clear">C</button>
+    <button class="key fn" data-k="Backspace" aria-label="Backspace">⌫</button>
+    <button class="key fn" data-k="%" aria-label="Percent">%</button>
+    <button class="key op" data-k="÷" aria-label="Divide">÷</button>
+    <button class="key" data-k="7">7</button>
+    <button class="key" data-k="8">8</button>
+    <button class="key" data-k="9">9</button>
+    <button class="key op" data-k="×" aria-label="Multiply">×</button>
+    <button class="key" data-k="4">4</button>
+    <button class="key" data-k="5">5</button>
+    <button class="key" data-k="6">6</button>
+    <button class="key op" data-k="−" aria-label="Subtract">−</button>
+    <button class="key" data-k="1">1</button>
+    <button class="key" data-k="2">2</button>
+    <button class="key" data-k="3">3</button>
+    <button class="key op" data-k="+" aria-label="Add">+</button>
+    <button class="key" data-k="±" aria-label="Toggle sign">±</button>
+    <button class="key" data-k="0">0</button>
+    <button class="key" data-k=".">.</button>
+    <button class="key eq" data-k="=" aria-label="Equals">=</button>
+  </div>
+  <aside class="history" id="history" aria-hidden="true">
+    <div class="hist-head">
+      <h2>History</h2>
+      <div>
+        <button class="text-btn" id="clearHist">Clear all</button>
+        <button class="icon-btn" id="closeHist" aria-label="Close history" style="display:inline-grid;vertical-align:middle">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <ul class="hist-list" id="histList"></ul>
+  </aside>
+</main>
+<p class="hint">Keyboard: 0–9 · + − * / · Enter · Backspace · Esc</p>
+
+<script src="script.js"></script>
+</body>
+</html>
