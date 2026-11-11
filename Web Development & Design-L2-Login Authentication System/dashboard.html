@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Session check runs before the page is shown; without a session the visitor is sent to login -->
+  <script src="js/auth.js"></script>
+  <script src="js/guard.js"></script>
+</head>
+<body class="guard">
+  <main class="card wide">
+    <div class="top">
+      <div>
+        <h1>Hello, <span id="user-name"></span></h1>
+        <p class="lead">You are signed in. This page is only visible with an active session.</p>
+      </div>
+      <button type="button" class="btn secondary" id="logout-btn">Logout</button>
+    </div>
+
+    <dl class="facts">
+      <div><dt>Signed in as</dt><dd id="user-id"></dd></div>
+      <div><dt>Account created</dt><dd id="created"></dd></div>
+      <div><dt>This session started</dt><dd id="started"></dd></div>
+    </dl>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

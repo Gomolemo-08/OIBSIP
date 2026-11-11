@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Create your account</h1>
+    <p class="lead">Register to access your dashboard.</p>
+
+    <p class="alert error-box" id="form-alert" role="alert" hidden></p>
+
+    <form id="register-form" novalidate>
+      <div class="field">
+        <label for="identifier">Username or email</label>
+        <input type="text" id="identifier" autocomplete="username" aria-describedby="identifier-error">
+        <p class="error" id="identifier-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <input type="password" id="password" autocomplete="new-password" aria-describedby="password-rules password-error">
+          <button type="button" class="toggle" data-target="password" aria-pressed="false">Show</button>
+        </div>
+        <ul class="rules" id="password-rules">
+          <li data-rule="length">At least 8 characters</li>
+          <li data-rule="number">At least 1 number</li>
+        </ul>
+        <p class="error" id="password-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirm password</label>
+        <div class="input-wrap">
+          <input type="password" id="confirm" autocomplete="new-password" aria-describedby="confirm-error">
+          <button type="button" class="toggle" data-target="confirm" aria-pressed="false">Show</button>
+        </div>
+        <p class="error" id="confirm-error" hidden></p>
+      </div>
+
+      <button type="submit" class="btn" id="submit-btn">Register</button>
+    </form>
+
+    <p class="switch">Already registered? <a href="login.html">Log in</a></p>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
