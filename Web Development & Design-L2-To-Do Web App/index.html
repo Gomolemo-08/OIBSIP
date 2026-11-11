@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today's Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="date" id="today-date"></p>
+      <h1>What needs doing today?</h1>
+    </header>
+
+    <form class="add-form" id="add-form" autocomplete="off">
+      <label for="task-input" class="visually-hidden">New task</label>
+      <input type="text" id="task-input" placeholder="Write a task, e.g. Email the supervisor" maxlength="200">
+      <button type="submit" class="btn btn-primary">Add Task</button>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+    </form>
+
+    <div class="lists">
+      <section class="panel" aria-labelledby="pending-title">
+        <div class="panel-head">
+          <h2 id="pending-title">Pending Tasks</h2>
+          <p class="count" id="pending-count" aria-live="polite">0 pending</p>
+        </div>
+        <ul class="task-list" id="pending-list"></ul>
+      </section>
+
+      <section class="panel panel-done" aria-labelledby="completed-title">
+        <div class="panel-head">
+          <h2 id="completed-title">Completed Tasks</h2>
+          <p class="count" id="completed-count" aria-live="polite">0 completed</p>
+        </div>
+        <ul class="task-list" id="completed-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
